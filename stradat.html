@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    
+  </head>
+<body>
+  <div class="header">
+    <img src="riga.jpg" width="200px">
+    <p>Rīgas Purvciema vidusskola</p>
+  </div>
+  <div id="menu">
+    <p><a href="index.html">Galvenā</a></p>
+    <p><a href="profesija.html">Profesija</a></p>
+    <p><a href="mprof.html">Manas nākotnes profesija</a></p>
+    <p><a href="macibas.html">Kur es varu mācīties Laivijā?</a></p>
+    <p><a href="stradat.html">Kur es varu strādāt Laivijā?</a></p>
+  </div>
+  <div id="content">
+    <h2>Jūras nozares iespējas Latvijā</h2>
+    <p>Latvijā atvērās plašas iespējas tiem, kuri izvēlas izglītoties un darboties jūras nozarē. Neatkarīgi no tā, vai interesē jūras tehnika un inženierija, jūras bioloģija vai vides aizsardzība, šī nozare piedāvā daudzveidīgas karjeras attīstības un personīgās izaugsmes iespējas. Arvien pieaugošā jūras ekonomika un tehnoloģiju attīstība rada pieprasījumu pēc kvalificētiem jūras nozares profesionāļiem, kas var veiksmīgi darboties gan Latvijā, gan starptautiskā līmenī.
+    </p>
+    <p>Jūras tehnika un inženierija ir nozares, kurās var iegūt tehniskas un inženierzinātnes izglītību, lai piedalītos jaunu un modernu kuģu projektēšanā, būvniecībā un uzturēšanā. Tas piedāvā iespēju ne tikai attīstīt jaunākās tehnoloģijas, bet arī sniegt ieguldījumu jūras transporta efektivitātē un drošībā.
+    </p>
+    <p>Jūras bioloģija un vides aizsardzība ir citas daudzsološas jomas Latvijā. Ar jūras resursu ilgtspējīgu pārvaldību un vides aizsardzības pieaugošo nozīmi, šīs specializācijas sniedz iespēju iesaistīties ekoloģiski atbildīgos projektos un veicināt jūras vides saglabāšanu.
+    </p>
+    <p>Neviens nevar aizmirst par iespēju strādāt ārpus Latvijas robežām. Ar jūras nozares globalizāciju un pieaugošo starptautisko sadarbību, jūras profesionāļiem ir izdevība iegūt pieredzi un veidot karjeru starptautiskajā jūras kopienā.
+    </p>
+    <p>Tādējādi, Latvija piedāvā ne tikai izcilu izglītību jūras nozarē, bet arī iespējas iekļauties šajā dinamiskajā un strauji attīstošajā sfērā, kur aizraujošie izaicinājumi iet roku rokā ar nemitīgu personīgo un profesionālo izaugsmi.
+    </p>
+  <h2>Izvēlieties darbu:</h2>
+
+    <form id="jobForm">
+      
+    <input type="checkbox" id="job1" name="job1" value="Darbs1" data-description="Jūras biologs: Pētīt un analizēt jūras dzīvo organismu dzīvesveidus un to mijiedarbību ar vidi." data-salary="1200">
+    <label for="job1">Jūras biologs (1200 EUR/mēnesī)</label><br>
+      
+    <input type="checkbox" id="job2" name="job2" value="Darbs2" data-description="Jūras inženieris: Projektēt un uzturēt jūras infrastruktūru un tehnoloģijas." data-salary="1500">
+    <label for="job2">Jūras inženieris (1500 EUR/mēnesī)</label><br>
+      
+    <input type="checkbox" id="job3" name="job3" value="Darbs3" data-description="Kuģa kapteinis: Vadīt un pārvaldīt kuģi, nodrošinot drošu un efektīvu navigāciju." data-salary="2000">
+    <label for="job3">Kuģa kapteinis (2000 EUR/mēnesī)</label><br>
+      
+    <input type="checkbox" id="job4" name="job4" value="Darbs4" data-description="Jūras mehāniķis: Remontēt un uzturēt kuģa mehānismus un aprīkojumu." data-salary="1300">
+<label for="job4">Jūras mehāniķis (1300 EUR/mēnesī)</label><br>
+      
+    <input type="checkbox" id="job5" name="job5" value="Darbs5" data-description="Jūras vides aizsardzības speciālists: Izstrādāt un īstenot pasākumus jūras vides aizsardzībai un ilgtspējībai." data-salary="1700">
+<label for="job5">Jūras vides aizsardzības speciālists (1700 EUR/mēnesī)</label><br>
+
+      
+    <button type="button" onclick="displaySelectedJobs()">Parādīt izvēlētos darbus</button>    </form>
+
+    
+    <p id="selectedJobs"></p>
+
+    <script> 
+      function displaySelectedJobs() 
+      { 
+        var selectedJobs = []; 
+        var totalSalary = 0; 
+        var checkboxes = document.querySelectorAll('input[type=checkbox]:checked'); 
+        checkboxes.forEach(function(checkbox) { 
+          selectedJobs.push({ description: checkbox.dataset.description, salary: parseInt(checkbox.dataset.salary) }); 
+          totalSalary += parseInt(checkbox.dataset.salary); 
+        }); 
+        var selectedJobsElement = document.getElementById('selectedJobs'); 
+        if (selectedJobs.length === 0) { 
+          selectedJobsElement.textContent = 'Nav izvēlētu darbu.'; 
+        } else { 
+          var displayText = 'Izvēlētie darbi:\n'; 
+          selectedJobs.forEach(function(job) { 
+            displayText += job.description + ' (Sākotnējā alga: ' + job.salary + ' EUR/mēnesī)\n'; 
+          }); 
+          displayText += 'Kopējā alga: ' + totalSalary + ' EUR/mēnesī'; 
+          selectedJobsElement.textContent = displayText; 
+        } 
+      }
+    </script>
+  </div>
+</body>
+</html>
+</
+
+
+

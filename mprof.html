@@ -1,0 +1,69 @@
+<!-- Mājas lapas dizains. Оформление сайта:background-color- цвет фона, font- шрифт... 
+https://www.w3schools.com/html/default.asp-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+
+<script>
+function krasa1(){
+  document.getElementById('menu').style.background='#6495ED';
+}
+</script>
+<script>
+function krasa2(){
+  document.getElementById('menu').style.background='#808000';
+}
+
+</script>
+<script>
+function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
+}
+</script>
+<script>
+function myFunction() {
+    document.getElementById("demo").innerHTML="Paragraph changed.";
+}
+
+</script>
+  </head>
+  <body>
+    <div class="header">
+     <img src="riga.jpg" width="200px">
+     <p>Rīgas Purvciema vidusskola</p>
+
+    </div>
+    <div id="menu">
+
+      <p><a href="index.html">Galvēna</a></p>
+      <p><a href="profesija.html">Profesija</a></p>
+      <p><a href="mprof.html">Manas nākotnes profesija</a></p>
+      <p><a href="macibas.html">Kur es varu mācīties Laivijā?</a></p>
+      <p><a href="stradat.html">Kur es varu strādāt Laivijā?</a></p>
+
+    </div>
+    <div id="content">
+      <img src="boskalis.jpeg" width="200px" height="200px">
+      <h2>Mana nākotnes profesija: jūrnieks</h2>
+      <p>Es neesmu tikai jūrnieks – esmu piedzīvojumu meklētājs, kurš caur okeāniem meklē jaunas zemes, peldot uz saules rietumu horizontu. Šajā amata jomā, katrs vilnis kļūst par manu mācītāju, un katrs debess stārnis – par norādījumu ceļā uz nezināmo. Tas ir aicinājums, kas prasa ne tikai fizisko spēku, bet arī mentālu izturību un gudrību.</p>
+      <p>Kā jūrnieks, esmu kā peldošs vēsturnieks, izsekotājs, kurš atvērs pasaules lapas jaunām paaudzēm. Mana prasme vadīt kuģi ir kā māksla, kas izriet no gadsimtu pieredzes un modernās tehnoloģijas savienojuma. Šis ir amats, kurā katrs mirklis ir izšķirošs, kurā manas lēmumu pieņemšanas prasmes tiek liktas uz spēles, nekad nezinot, kāda pārsteiguma var dot nākamā minūte.</p>
+      <p>Manā profesijā "komanda" nav tikai vārds, tas ir dzīvesveids. Ar savu kolektīvu esam kā viena liela saimniecība, kur katrs ir svarīgs savā lomā, lai nodrošinātu drošu un veiksmīgu ceļojumu. Mūsu darbs prasa ne tikai sadarbību, bet arī savstarpēju cieņu un uzticību, kas veido stipru saikni starp mums.</p>
+      <p>Man nav tikai galamērķis, bet gan ceļš, kas ved mani cauri pasauli. Es redzu saules lēkšanu pār tālo horizontu un zinu, ka mana nākotne ir iesaistīta šajā brīnumainajā piedzīvojumu pasaulē. Katrs ceļojums ir ne tikai iespēja atklāt jaunas vietas un kultūras, bet arī izaicinājums pārvarēt sevi un augt personīgi.</p>
+      <p>Tāpēc esmu gatavs ienirt šajā aizraujošajā piedzīvojumu pasaulē, gatavs kāpēcēm un kritieniem, gatavs atklāt neskartās jūras un izprast to, kas slēpjas zem debess zila seguma. Mana nākotnes profesija nav tikai darbs – tā ir dzīvesstila izvēle, kurā esmu gatavs saskarties ar jebkuriem izaicinājumiem un izbaudīt katru mirkli, ko man piedāvā okeāni.</p>
+      <button onclick="showGif()">View</button>
+            <div id="gifContainer"></div>
+          </div>
+
+          <script>
+            function showGif() {
+              var gifContainer = document.getElementById('gifContainer');
+              gifContainer.innerHTML = '<img src="waves-ocean.gif" alt="gifs">';
+            }
+          </script>
+        </body>
+      </html>
